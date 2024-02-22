@@ -71,6 +71,15 @@
     <Reference Include="DevExpress.XtraRichEdit.v23.2" />
     <Reference Include="DevExpress.XtraTreeList.v23.2" />
     <Reference Include="DevExpress.XtraTreeMap.v23.2" />
+    <Reference Include="Nampula.DI">
+      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.DI.dll</HintPath>
+    </Reference>
+    <Reference Include="Nampula.DI.B1">
+      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.DI.B1.dll</HintPath>
+    </Reference>
+    <Reference Include="Nampula.Framework">
+      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,6 +98,7 @@
     <Compile Include="DesignerForm1.Designer.cs">
       <DependentUpon>DesignerForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factory\DBNampula.cs" />
     <Compile Include="Gatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

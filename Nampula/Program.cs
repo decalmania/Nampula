@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Nampula.DI
+namespace Nampula
 {
     internal static class Program
     {

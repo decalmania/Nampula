@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Nampula
+namespace NampulaUI
 {
     internal static class Program
     {
@@ -17,7 +17,7 @@ namespace Nampula
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DesignerForm1());
+            Application.Run(new Tabela());
         }
     }
 }

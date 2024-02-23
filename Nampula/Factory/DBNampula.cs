@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 
-namespace Nampula.Factory
+namespace NampulaDI.Factory
 {
     public class DBNampula : DataBaseAdapter
     {
@@ -17,30 +17,30 @@ namespace Nampula.Factory
 
         }
 
-        public new static t CreateObject<t>()
+        public new static t CreatObject<t>()
         {
-            return CreateObject<t>(null);
+            return CreatObject<t>(null);
         }
 
-        public new static t CreateObject<t>(Connection pConnection)
+        public new static t CreatObject<t>(Connection pConnection)
         {
             return new DBNampula().CreateBaseObject<t>(pConnection);
         }
 
         private t CreateBaseObject<t>(Connection pConnection)
         {
-            return CreateObject<t>(pConnection);
+            return base.CreateObject<t>(pConnection);
         }
 
         public static List<t> GetAll<t>() where t : TableAdapter, new()
         {
-            t myTable = CreateObject<t>();
+            t myTable = CreatObject<t>();
             return myTable.FillCollection<t>(myTable.GetData().Rows);
         }
 
         public static t GetByKey<t>(int id) where t : TableAdapter, new()
         {
-            t entity = CreateObject<t>();
+            t entity = CreatObject<t>();
 
             if (entity.KeyFields.Count > 1)
                 throw new ArgumentOutOfRangeException("Quantidade de chaves primarias invalida");
@@ -48,6 +48,6 @@ namespace Nampula.Factory
             entity.GetByKey();
             return entity;
         }
-
     }
+
 }

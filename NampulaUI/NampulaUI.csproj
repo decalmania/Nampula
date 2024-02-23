@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1508DAF3-0577-4458-9300-79C4025705B1}</ProjectGuid>
+    <ProjectGuid>{B2902FD8-60FC-42FE-820F-AF17F9092099}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nampula</RootNamespace>
-    <AssemblyName>Nampula</AssemblyName>
+    <RootNamespace>NampulaUI</RootNamespace>
+    <AssemblyName>NampulaUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -37,7 +37,9 @@
     <Reference Include="DevExpress.Charts.v23.2.Core" />
     <Reference Include="DevExpress.Dashboard.v23.2.Core" />
     <Reference Include="DevExpress.Dashboard.v23.2.Win" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v23.2" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v23.2" />
     <Reference Include="DevExpress.DataAccess.v23.2" />
     <Reference Include="DevExpress.DataAccess.v23.2.UI" />
@@ -45,10 +47,13 @@
     <Reference Include="DevExpress.Map.v23.2.Core" />
     <Reference Include="DevExpress.Office.v23.2.Core" />
     <Reference Include="DevExpress.PivotGrid.v23.2.Core" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v23.2.Core" />
     <Reference Include="DevExpress.RichEdit.v23.2.Core" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v23.2.Core" />
     <Reference Include="DevExpress.TreeMap.v23.2.Core" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.2" />
     <Reference Include="DevExpress.Utils.v23.2.UI" />
     <Reference Include="DevExpress.Xpo.v23.2" />
@@ -56,6 +61,7 @@
     <Reference Include="DevExpress.XtraCharts.v23.2" />
     <Reference Include="DevExpress.XtraCharts.v23.2.UI" />
     <Reference Include="DevExpress.XtraCharts.v23.2.Wizard" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.2" />
     <Reference Include="DevExpress.XtraGauges.v23.2.Core" />
     <Reference Include="DevExpress.XtraGauges.v23.2.Presets" />
@@ -71,17 +77,23 @@
     <Reference Include="DevExpress.XtraRichEdit.v23.2" />
     <Reference Include="DevExpress.XtraTreeList.v23.2" />
     <Reference Include="DevExpress.XtraTreeMap.v23.2" />
-    <Reference Include="Nampula.DI">
-      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.DI.dll</HintPath>
-    </Reference>
-    <Reference Include="Nampula.DI.B1">
-      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.DI.B1.dll</HintPath>
-    </Reference>
     <Reference Include="Nampula.Framework">
       <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="Nampula.UI">
+      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\Nampula.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="SapDesign">
+      <HintPath>..\..\..\..\Downloads\Nampula.DLLS\SapDesign.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,18 +104,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesignerForm1.cs">
+    <Compile Include="Tabela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DesignerForm1.Designer.cs">
-      <DependentUpon>DesignerForm1.cs</DependentUpon>
+    <Compile Include="Tabela.Designer.cs">
+      <DependentUpon>Tabela.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factory\DBNampula.cs" />
-    <Compile Include="Gatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DesignerForm1.resx">
-      <DependentUpon>DesignerForm1.cs</DependentUpon>
+    <EmbeddedResource Include="Tabela.resx">
+      <DependentUpon>Tabela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nampula\NampulaDI.csproj">
+      <Project>{1508DAF3-0577-4458-9300-79C4025705B1}</Project>
+      <Name>NampulaDI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

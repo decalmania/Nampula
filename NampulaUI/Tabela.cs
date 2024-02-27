@@ -1,24 +1,27 @@
-﻿using Nampula.Framework;
+﻿using Nampula;
+using Nampula.Framework;
+using NampulaDI.Repository;
 using NampulaDI;
 using System;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
+using Nampula.UI;
 
 namespace NampulaUI
 {
-    public partial class Tabela : Nampula.UI.Form
+    public partial class Tabela : Form
     {
-        public Repositorio repositorio = new Repositorio();
+        //public Repositorio repositorio = new Repositorio();
         public Gatos novoGato = new Gatos();
-        public Tabela()
+        IRepositorio repositorio;
+        public Tabela(IRepositorio repositorio)
         {
             InitializeComponent();
+            this.repositorio = repositorio;
             AtualizarTabela();
         }
 
         public void AtualizarTabela()
         {
-            var repositorio = new Repositorio();
 
             try
             {
@@ -36,6 +39,7 @@ namespace NampulaUI
             try
             {
                 preencherCamposComValores(novoGato);
+                AtualizarTabela();
             }
             catch (Exception ex)
             {
@@ -47,8 +51,8 @@ namespace NampulaUI
         {
             try
             {
-                
                 verificarSeEditaOuCria(novoGato);
+                AtualizarTabela();
             }
             catch (Exception ex)
             {
@@ -62,6 +66,7 @@ namespace NampulaUI
             {
                 var idgatoRemover = pegarIdObjetoSelecionado();
                 repositorio.Remover(idgatoRemover);
+                AtualizarTabela();
             }
             catch (Exception ex)
             {
@@ -69,16 +74,32 @@ namespace NampulaUI
             }
         }
 
+        public int gerarId()
+        {
+            int id = 1;
+
+            try
+            {
+                return id++;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void verificarSeEditaOuCria(Gatos gato)
         {
             try
             {
+                Validacoes.Validar(textBoxNomeGato.Text, textBoxIdadeGato.Text);
+
                 obterValoresDosCampos();
 
-                if (gato.Id == null) //nao sei
+                if (gato.Id == 0)
                 {
 
-                    //gerar id
+                    gato.Id = gerarId();
                     adicionarDadosGato();
 
                 }

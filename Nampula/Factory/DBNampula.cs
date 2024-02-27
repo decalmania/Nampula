@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 
 namespace NampulaDI.Factory
@@ -12,38 +10,38 @@ namespace NampulaDI.Factory
     {
         public DBNampula() : base()
         {
-            DataBaseName = "SBO_INVENT_HOM";
+            DataBaseName = Properties.Resources.DataBaseName;
             Assembly = Assembly.GetExecutingAssembly();
 
         }
 
-        public new static t CreatObject<t>()
+        public new static T CreateObject<T>()
         {
-            return CreatObject<t>(null);
+            return CreateObject<T>(null);
         }
 
-        public new static t CreatObject<t>(Connection pConnection)
+        public static T CreateObject<T>(Connection pConnection)
         {
-            return new DBNampula().CreateBaseObject<t>(pConnection);
+            return new DBNampula().CreateBaseObject<T>(pConnection);
         }
 
-        private t CreateBaseObject<t>(Connection pConnection)
+        private T CreateBaseObject<T>(Connection pConnection)
         {
-            return base.CreateObject<t>(pConnection);
+            return CreateObject<T>(pConnection);
         }
 
         public static List<t> GetAll<t>() where t : TableAdapter, new()
         {
-            t myTable = CreatObject<t>();
+            t myTable = CreateObject<t>();
             return myTable.FillCollection<t>(myTable.GetData().Rows);
         }
 
         public static t GetByKey<t>(int id) where t : TableAdapter, new()
         {
-            t entity = CreatObject<t>();
+            t entity = CreateObject<t>();
 
             if (entity.KeyFields.Count > 1)
-                throw new ArgumentOutOfRangeException("Quantidade de chaves primarias invalida");
+                throw new ArgumentOutOfRangeException("Quantidade de chaves primárias inválida");
             entity.KeyFields.First().Value = id;
             entity.GetByKey();
             return entity;

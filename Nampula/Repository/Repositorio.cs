@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Nampula.DI;
+using NampulaDI.Repository;
 
 namespace NampulaDI
 {
-    public class Repositorio
+    public class Repositorio : IRepositorio
     {
         public List<Gatos> ObterTodos()
         {
@@ -41,7 +42,7 @@ namespace NampulaDI
         {
             try
             {
-                var gatoAdicionar = DBNampula.CreatObject<Gatos>();
+                var gatoAdicionar = DBNampula.CreateObject<Gatos>();
                 gatoAdicionar.Add();
             }
             catch (Exception ex)

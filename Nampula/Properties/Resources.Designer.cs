@@ -67,5 +67,16 @@ namespace NampulaDI.Properties
                 resourceCulture = value;
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to DBNampula.
+        /// </summary>
+        internal static string DataBaseName
+        {
+            get
+            {
+                return ResourceManager.GetString("DataBaseName", resourceCulture);
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nampula.Properties
+namespace NampulaDI.Properties
 {
 
 

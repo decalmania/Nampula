@@ -17,5 +17,13 @@ namespace NampulaDI
         public static readonly string erroEditar = "Erro ao editar dados selecionados";
 
         public static readonly string erroRemover = "Erro ao remover dados selecionados";
+
+        public static readonly string mensagemErroNomeVazio = "É necessário informar o nome do gato";
+
+        public static readonly string mensagemErroIdadeVazia = "É necessário informar a idade do gato";
+
+        public static readonly string mensagemErroNomeInvalido = "O nome do gato deve conter apenas letras";
+
+        public static readonly string mensagemErroIdadeInvalida = "A idade do gato deve conter apenas números";
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NampulaDI
 {
     public static class Mensagens
@@ -18,12 +13,18 @@ namespace NampulaDI
 
         public static readonly string erroRemover = "Erro ao remover dados selecionados";
 
-        public static readonly string mensagemErroNomeVazio = "É necessário informar o nome do gato";
+        public static readonly string mensagemErroNomeVazio = "É necessário informar o nome do gato.\n";
 
-        public static readonly string mensagemErroIdadeVazia = "É necessário informar a idade do gato";
+        public static readonly string mensagemErroIdadeVazia = "É necessário informar a idade do gato.\n";
 
-        public static readonly string mensagemErroNomeInvalido = "O nome do gato deve conter apenas letras";
+        public static readonly string perguntaFecharAba = "Deseja fechar a tela de cadastro?";
 
-        public static readonly string mensagemErroIdadeInvalida = "A idade do gato deve conter apenas números";
+        public static readonly string perguntaRemoverGato = "Deseja remover dados do gato?";
+
+        public static readonly string confirmacaoGatoAdicionado = "Dados do gato adicionados com sucesso!";
+
+        public static readonly string confirmacaoGatoAtualizado = "Dados do gato atualizados com sucesso!";
+
+        public static readonly string confirmacaoGatoRemovido = "Dados do gato removidos com sucesso!";
     }
 }

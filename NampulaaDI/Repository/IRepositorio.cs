@@ -1,10 +1,4 @@
-﻿using Nampula.DI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 namespace NampulaDI.Repository
 {
     public interface IRepositorio
@@ -13,9 +7,9 @@ namespace NampulaDI.Repository
 
         Gatos ObterPorId(int id);
 
-        void Adicionar();
+        void Adicionar(Gatos gatoAdicionar);
 
-        void Editar(Gatos gatoAtualizado);
+        void Editar(Gatos gatoAtualizar);
 
         void Remover(int id);
     }

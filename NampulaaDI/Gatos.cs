@@ -1,11 +1,5 @@
-﻿
-using Nampula.DI;
+﻿using Nampula.DI;
 using System.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NampulaDI
 {

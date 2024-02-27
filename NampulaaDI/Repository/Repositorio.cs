@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Nampula.DI;
 using NampulaDI.Repository;
 
 namespace NampulaDI
@@ -37,11 +34,10 @@ namespace NampulaDI
             }
         }
 
-        public void Adicionar()
+        public void Adicionar(Gatos gatoAdicionar)
         {
             try
             {
-                var gatoAdicionar = DBNampula.CreateObject<Gatos>();
                 gatoAdicionar.Add();
             }
             catch (Exception ex)
@@ -50,12 +46,11 @@ namespace NampulaDI
             }
         }
 
-        public void Editar(Gatos gatoAtualizado)
+        public void Editar(Gatos gatoAtualizar)
         {
             try
             {
-                //var gato = ObterPorId(gatoAtualizado.Id);
-                gatoAtualizado.Update();
+                gatoAtualizar.Update();
             }
             catch (Exception ex)
             {

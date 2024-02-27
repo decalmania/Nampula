@@ -8,25 +8,22 @@ namespace NampulaDI.Factory
 {
     public class DBNampula : DataBaseAdapter
     {
-        public DBNampula() : base()
+        public static readonly DBNampula Instance = new DBNampula();
+
+        public DBNampula()
         {
-            this.DataBaseName = Properties.Resources.DataBaseName;
-            this.Assembly = Assembly.GetExecutingAssembly();
+            DataBaseName = Properties.Resources.DataBaseName;
+            Assembly = Assembly.GetExecutingAssembly();
         }
 
-        public new static T CreateObject<T>()
+        public new static TT CreateObject<TT>() where TT : DataObject, new()
         {
-            return CreateObject<T>(null);
-        }
+            var newObject = new TT
+            {
+                DBName = Instance.DataBaseName
+            };
 
-        public static T CreateObject<T>(Connection pConnection)
-        {
-            return new DBNampula().CreateBaseObject<T>(pConnection);
-        }
-
-        private T CreateBaseObject<T>(Connection pConnection)
-        {
-            return CreateObject<T>(pConnection);
+            return newObject;
         }
 
         public static List<t> GetAll<t>() where t : TableAdapter, new()

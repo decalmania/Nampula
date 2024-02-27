@@ -1,17 +1,12 @@
-﻿using Nampula;
-using Nampula.Framework;
-using NampulaDI.Repository;
+﻿using NampulaDI.Repository;
 using NampulaDI;
 using System;
-using System.Runtime.InteropServices;
-using Nampula.UI;
+using System.Windows.Forms;
 
 namespace NampulaUI
 {
-    public partial class Tabela : Form
+    public partial class Tabela : Nampula.UI.Form
     {
-        //public Repositorio repositorio = new Repositorio();
-        public Gatos novoGato = new Gatos();
         IRepositorio repositorio;
         public Tabela(IRepositorio repositorio)
         {
@@ -32,98 +27,6 @@ namespace NampulaUI
             {
                 mostrarMensagemExcecao(ex);
             }
-        }
-
-        private void aoClicarEditar(object sender, EventArgs e)
-        {
-            try
-            {
-                preencherCamposComValores(novoGato);
-                AtualizarTabela();
-            }
-            catch (Exception ex)
-            {
-                mostrarMensagemExcecao(ex);
-            }
-        }
-
-        private void aoClicarSalvar(object sender, EventArgs e)
-        {
-            try
-            {
-                verificarSeEditaOuCria(novoGato);
-                AtualizarTabela();
-            }
-            catch (Exception ex)
-            {
-                mostrarMensagemExcecao(ex);
-            }
-        }
-
-        private void aoClicarRemover(object sender, EventArgs e)
-        {
-            try
-            {
-                var idgatoRemover = pegarIdObjetoSelecionado();
-                repositorio.Remover(idgatoRemover);
-                AtualizarTabela();
-            }
-            catch (Exception ex)
-            {
-                mostrarMensagemExcecao(ex);
-            }
-        }
-
-        public int gerarId()
-        {
-            int id = 1;
-
-            try
-            {
-                return id++;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public void verificarSeEditaOuCria(Gatos gato)
-        {
-            try
-            {
-                Validacoes.Validar(textBoxNomeGato.Text, textBoxIdadeGato.Text);
-
-                obterValoresDosCampos();
-
-                if (gato.Id == 0)
-                {
-
-                    gato.Id = gerarId();
-                    adicionarDadosGato();
-
-                }
-                else
-                {
-                    AtualizarDadosGato();
-                }
-            }
-            catch (Exception ex)
-            {
-                mostrarMensagemExcecao(ex);
-            }
-        }
-
-        public void preencherCamposComValores(Gatos gato)
-        {
-            textBoxNomeGato.Text = gato.Name;
-            textBoxIdadeGato.Text = gato.Idade.ToString();
-        }
-
-        public void obterValoresDosCampos()
-        {
-            novoGato.Name = textBoxNomeGato.Text;
-            novoGato.Idade = Convert.ToInt32(textBoxIdadeGato.Text);
         }
 
         public bool VerificarSelecaoDeLinhas()
@@ -172,11 +75,66 @@ namespace NampulaUI
             }
         }
 
-        public void adicionarDadosGato()
+        private void aoClicarAdicionar(object sender, EventArgs e)
         {
             try
             {
-                repositorio.Adicionar();
+                var cadastro = new Cadastro(null);
+                var resultadoCadastro = cadastro.ShowDialog();
+
+                if (resultadoCadastro == DialogResult.OK)
+                {
+                    repositorio.Adicionar(cadastro.novoGato);
+                    AtualizarTabela();
+
+                    MessageBox(Mensagens.confirmacaoGatoAdicionado);
+                }
+            }
+            catch (Exception ex)
+            {
+                mostrarMensagemExcecao(ex);
+            }
+
+        }
+
+        private void aoClicarEditar(object sender, EventArgs e)
+        {
+
+            try
+            {
+                var gatoEditar = obterObjetoPeloId();
+                Cadastro cadastro = new Cadastro(gatoEditar);
+                var resultadoCadastro = cadastro.ShowDialog();
+
+                if (resultadoCadastro == DialogResult.OK)
+                {
+                    repositorio.Editar(gatoEditar);
+                    AtualizarTabela();
+
+                    MessageBox(Mensagens.confirmacaoGatoAtualizado);
+                }
+            }
+            catch (Exception ex)
+            {
+                mostrarMensagemExcecao(ex);
+            }
+
+        }
+
+        private void aoClicarRemover(object sender, EventArgs e)
+        {
+            try
+            {
+                var confirmarCancelamento = MessageBox(Mensagens.perguntaRemoverGato, MessageBoxButtons.YesNo);
+
+                if (confirmarCancelamento == DialogResult.Yes)
+                {
+                    var idgatoRemover = pegarIdObjetoSelecionado();
+                    repositorio.Remover(idgatoRemover);
+                    AtualizarTabela();
+
+                    MessageBox(Mensagens.confirmacaoGatoRemovido);
+                }
             }
             catch (Exception ex)
             {
@@ -184,18 +142,6 @@ namespace NampulaUI
             }
         }
 
-        public void AtualizarDadosGato()
-        {
-            try
-            {
-                var gatoAtualizar = obterObjetoPeloId();
-                repositorio.Editar(gatoAtualizar);
-            }
-            catch (Exception ex)
-            {
-                mostrarMensagemExcecao(ex);
-            }
-        }
         public void mostrarMensagemExcecao(Exception ex)
         {
 

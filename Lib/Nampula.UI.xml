@@ -1,0 +1,3592 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nampula.UI</name>
+    </assembly>
+    <members>
+        <member name="M:Nampula.UI.Application.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Application.GetInstance">
+            <summary>
+            Pega a instancia da aplicação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:Nampula.UI.Application.OnStartConnection">
+            <summary>
+            Evento disparado ao iniciar a conecão com o SAP
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Application.OnStartCreateMenu">
+            <summary>
+            Evento disparao para criar o menu da aplicação
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Application.OnShutDown">
+            <summary>
+            Evento disparado quando fecha a aplicação
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Application.OnChangeCompany">
+            <summary>
+            Evento disparado quando altera a empresa
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Application.OnMenuClick">
+            <summary>
+            EVento disparado ao clciar em um menu do SAP
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Application.NameSpace">
+            <summary>
+            Espaço de nome da aplicação
+            </summary>
+            <remarks>
+            Esse nome deve ser curto o suficiente e não pode ser repetido
+            Ele é usado para criação de menus dentro do sistema
+            </remarks>
+        </member>
+        <member name="P:Nampula.UI.Application.Company">
+            <summary>
+            Empresa conectada
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Application.Desktop">
+            <summary>
+            Dados do Ambiente do SAP
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Application.Forms">
+            <summary>
+            Lista de Formulário aberto
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Application.Language">
+            <summary>
+            Linguagem do Sistema
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Application.AppType">
+            <summary>
+            Tipo da Aplicação
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Application.AddonIdentiers">
+            <summary>
+            Lista de Identificadores
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Application.StartApplication(System.String,Nampula.UI.eAppType)">
+            <summary>
+            Inicia o comportamento da aplicação dentro do SAP
+            </summary>
+            <param name="pNameSpace">Nome do espaço de nomes</param>
+            <param name="pAppType">Tipo de Aplicação</param>
+            <returns>True se iniciar</returns>
+        </member>
+        <member name="M:Nampula.UI.Application.MessageBox(System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,Nampula.UI.Form)">
+            <summary>
+            Exbie uma mensagem de texto
+            </summary>
+            <param name="text">Texto que será exibido</param>
+            <param name="buttons">COnjunto de botões</param>
+            <param name="icon">Ícone que ser exibido</param>
+            <param name="pForm">Formulario pai</param>
+            <returns>O Botão que foi pressionado</returns>
+        </member>
+        <member name="M:Nampula.UI.Application.MessageBox(System.String,System.Windows.Forms.MessageBoxIcon,Nampula.UI.Form)">
+            <summary>
+            Exbie uma mensagem de texto
+            </summary>
+            <param name="text">Texto que será exibido</param>
+            <param name="icon">Ícone que ser exibido</param>
+            <param name="pForm">Formulario pai</param>
+            <returns>O Botão que foi pressionado</returns>
+        </member>
+        <member name="M:Nampula.UI.Application.MessageBox(System.String,Nampula.UI.Form)">
+            <summary>
+            Exbie uma mensagem de texto
+            </summary>
+            <param name="text">Texto que será exibido</param>
+            <param name="pForm">Formulario pai</param>
+            <returns>O Botão que foi pressionado</returns>
+        </member>
+        <member name="M:Nampula.UI.Application.SetTextOnStatusBar(System.String,Nampula.UI.BoMessageTime,Nampula.UI.BoStatusBarMessageType)">
+            <summary>
+            Inser uma nova mensagem na barra de status
+            </summary>
+            <param name="text">Texto</param>
+            <param name="seconds">Tempo</param>
+            <param name="type">Tipo de Alerta</param>
+        </member>
+        <member name="M:Nampula.UI.Application.SetTextOnStatusBar(System.String,Nampula.UI.BoMessageTime)">
+            <summary>
+            Inser uma nova mensagem na barra de status
+            </summary>
+            <param name="text">Texto</param>
+            <param name="seconds">Tempo</param>
+        </member>
+        <member name="M:Nampula.UI.Application.SetTextOnStatusBar(System.String)">
+            <summary>
+            Inser uma nova mensagem na barra de status
+            </summary>
+            <param name="text">Texto</param>
+        </member>
+        <member name="M:Nampula.UI.Application.MainForm">
+            <summary>
+            Captura o formulário principal da aplicação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Application.PeformLinkedButton(System.Object,Nampula.UI.LinkedButtonEventArgs)">
+            <summary>
+            Realiza uma simulação de click no LinkedButton
+            </summary>
+            <param name="sender"></param>
+            <param name="Event"></param>
+        </member>
+        <member name="M:Nampula.UI.Application.GetParam">
+            <summary>
+            Pega os parametros de conexão do SAP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Application.GetMenu(System.String)">
+            <summary>
+            Obetem um menu do B1 através do seu ID
+            </summary>
+            <param name="pMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Application.CheckLicense(System.String,System.DateTime)">
+            <summary>
+            Verifica se o licenciamento da aplicação
+            </summary>
+            <param name="pAddonName">Nome do Addon</param>
+            <param name="pDateExpired">Data que expira</param>
+            <exception cref="T:System.Exception">Licença vencida !</exception>
+        </member>
+        <member name="T:Nampula.UI.ApplicationExtention">
+            <summary>
+            Classe de utilidades para conversão entre aplicações
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ApplicationExtention.ToMenu(SAPbouiCOM.MenuItem)">
+            <summary>
+            Converte um objeto SAPBouiCOM.MenuItem para MenuItem
+            </summary>
+            <param name="pMenu">Um objeto SAP para o menu</param>
+            <returns>Um objeto menu</returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationExtention.ToCompany(SAPbouiCOM.Company)">
+            <summary>
+            Converte um objeto SAPBouiCOM.Comany em Company
+            </summary>
+            <param name="pCompany">Um objeto SAPBouiCOM.Comany</param>
+            <returns>um objeto company</returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationExtention.ToDesktop(SAPbouiCOM.Desktop)">
+            <summary>
+            Converte um objeto SAPBouiCOM.Desktop em Desktop
+            </summary>
+            <param name="pCompany">Um objeto SAPBouiCOM.Desktop</param>
+            <returns>um objeto Desktop</returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationExtention.ToItemEvent(SAPbouiCOM.ItemEvent)">
+            <summary>
+            Converte um objeto SAPBouiCOM.ItemEvent em Desktop
+            </summary>
+            <param name="pCompany">Um objeto SAPBouiCOM.ItemEvent</param>
+            <returns>um objeto ItemEvent</returns>
+        </member>
+        <member name="T:Nampula.UI.DinamicInterface.DinamicInterfaceService">
+            <summary>
+            Serviços de controle de alteração de propriedades na tela 
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.DinamicInterface.DinamicInterfaceService.db">
+            <summary>
+            Banco de dados dos registros da tela
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.DinamicInterface.DinamicInterfaceService.controlChanged">
+            <summary>
+            Lista de Nomes que foram alterados
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.#ctor(Nampula.DI.DataBaseAdapter,Nampula.UI.Form)">
+            <summary>
+            Construtor padrão
+            </summary>
+            <param name="pDB"></param>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.CreateNotExists">
+            <summary>
+            Cria a tabela caso a mesma não exista
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.ShowPropertyForm(Nampula.UI.Form,System.String,System.String,System.String)">
+            <summary>
+            Exibe o formulário para alteração da descrição
+            </summary>
+            <param name="form">Formulário onde está o controle</param>
+            <param name="pControl">Nome do Controle</param>
+            <param name="pColumn">Nome da Coluna</param>
+            <param name="pDesc">Descrição atual do controle</param>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.SetLabels(Nampula.UI.Form)">
+            <summary>
+            Atribui as legendas a tela
+            </summary>
+            <param name="pForm">Formulário</param>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.SetLabels(System.Windows.Forms.Control.ControlCollection,System.Collections.Generic.List{Nampula.UI.DinamicInterface.UserControlProperty})">
+            <summary>
+            Atribui as legendas a tela se encontrar o controles e seus filhos
+            </summary>
+            <param name="pControls">Lista de Controles</param>
+            M<param name="pProperty">Lista de Propriedades do formulário</param>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.GetUserControlOrNull(System.String,System.String,System.String)">
+            <summary>
+            Pega um registro no banco de dados com os parametros passados, se não encontrar traz nulo
+            </summary>
+            <param name="pForm">Formulário</param>
+            <param name="pControl">Controle</param>
+            <param name="pColumn">Coluna</param>
+            <returns>Um controle UserControlProperty ou nulo</returns>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.DinamicInterfaceService.CreateUserControlProperty">
+            <summary>
+            Pega a instancia do objeto UserControlProperty
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nampula.UI.DinamicInterface.frmSettingDescription">
+            <summary>
+            Tela para determinas a descrição de um controle / coluna na tela
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.DinamicInterface.frmSettingDescription.tblObj">
+            <summary>
+            Model Corrente
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.frmSettingDescription.#ctor(Nampula.UI.DinamicInterface.UserControlProperty,System.String)">
+            <summary>
+            Ctr
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.DinamicInterface.frmSettingDescription.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.frmSettingDescription.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.DinamicInterface.frmSettingDescription.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.DinamicInterface.UserControlProperty">
+            <summary>
+            Tabela para armazenamento das configurações do software
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.DinamicInterface.UserControlProperty.Definition">
+            <summary>
+            Nome da tabela do banco de dados.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.DinamicInterface.UserControlProperty.FieldsName">
+            <summary>
+            Objeto com o nome de cada coluna do banco de dados.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.DinamicInterface.UserControlProperty.FieldsDescription">
+            <summary>
+            Objeto com a descrição de cada coluna do banco de dados.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.Extentions.UtilityUiExtentions">
+            <summary>
+            Extenções uteis para interface
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.UtilityUiExtentions.ConfirmAndClose(Nampula.UI.Form)">
+            <summary>
+            Exibe uma mensagem de confirmação na tela para o usuário fechar ou não a tela corrente
+            </summary>
+            <param name="owner">Formulário</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.UtilityUiExtentions.ConfirmQuertion(Nampula.UI.Form,System.String,System.Object[])">
+            <summary>
+            Exibe uma mensagem de confirmação na tela para o usuário
+            com opção de passagem de parametros
+            </summary>
+            <param name="owner">Formulário</param>
+            <param name="message">Mesagem no estilo do String</param>
+            <param name="param">Lista de Parametros do ofrma</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.UtilityUiExtentions.SetTextBarSucess(Nampula.UI.Form,System.String,System.Object[])">
+            <summary>
+            Exibe uma mensagem de sucesso na barra de status
+            </summary>
+            <param name="owner">Formulário</param>
+            <param name="message">Mensagem no estilo string.Format</param>
+            <param name="param">Parametros da mesangem</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.UtilityUiExtentions.SetTextBarWarning(Nampula.UI.Form,System.String,System.Object[])">
+            <summary>
+            Exibe uma mensagem de alerta na barra de status
+            </summary>
+            <param name="owner">Formulário</param>
+            <param name="message">Mensagem no estilo string.Format</param>
+            <param name="param">Parametros da mesangem</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.UtilityUiExtentions.SetTextBarError(Nampula.UI.Form,System.String,System.Object[])">
+            <summary>
+            Exibe uma mensagem de erro na barra de status
+            </summary>
+            <param name="owner">Formulário</param>
+            <param name="message">Mensagem no estilo string.Format</param>
+            <param name="param">Parametros da mesangem</param>
+        </member>
+        <member name="T:Nampula.UI.Helpers.Extentions.ComboBoxExtention">
+            <summary>
+            Utilidades para o objeto ComboBox
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.ComboBoxExtention.FillValues``2(Nampula.UI.ComboBox,Nampula.DI.DataBaseAdapter,``1)">
+            <summary>
+            Preenche o combobox com os valores de uma tabela de dominio
+            </summary>
+            <typeparam name="t">Um TableDomainTbale</typeparam>
+            <param name="pComboBox">Um combobox</param>
+            <param name="pDB">Objeto do Banco de dados</param>
+            <param name="pSelect">Registro que será selecionado por padrão</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.ComboBoxExtention.FillValues``1(Nampula.UI.ComboBox,Nampula.DI.DataBaseAdapter,System.String,System.String,System.Object)">
+            <summary>
+            Preenche o combobox com os valores de uma tabela ja instanciada e selecione o primeiro registro caso existir
+            </summary>
+            <typeparam name="t">Um TableAdapter</typeparam>
+            <param name="pComboBox">Um combobox</param>
+            <param name="pDB">Objeto do Banco de dado</param>
+            <param name="pKey">Nome do Campo chave</param>
+            <param name="pName">Descrição do Campo chave</param>
+            <param name="pValue">Valor padrão</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.ComboBoxExtention.FillValues``1(Nampula.UI.ComboBox,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Preenche o combobox 
+            </summary>
+            <typeparam name="t">Um TableAdapter do B1</typeparam>
+            <param name="pComboBox">Um combobox</param>
+            <param name="pCompanyDb">Nome do banco de dados</param>
+            <param name="pKey">Nome do Campo chave</param>
+            <param name="pName">Descrição do Campo chave</param>
+            <param name="pValue">Valor padrão</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.ComboBoxExtention.FillValues(Nampula.UI.ComboBox,System.Collections.Generic.Dictionary{System.Object,System.String},System.Object)">
+            <summary>
+            /Preenche um comboox apartir de um enum
+            </summary>
+            <param name="pComboBox">Um vomboBox</param>
+            <param name="pList">UMa lista de tipos</param>
+        </member>
+        <member name="T:Nampula.UI.Helpers.Extentions.GridViewExtension">
+            <summary>
+            Extensões de métodos para o controle Nampula.UI.GridView
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.GetSelected``1(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            Busca o objeto selecionado na grid.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter.</typeparam>
+            <param name="pGridView">O controle GridView.</param>
+            <returns>Retorna um objeto do tipo TableAdapter.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.GetChildRowHandles(DevExpress.XtraGrid.Views.Grid.GridView,System.Int32)">
+            <summary>
+            Busca os 'handles' dos filhos da linha.
+            </summary>
+            <remarks>Se não for uma linha agrupada, retorna o código da própria linha.</remarks>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pRowHandle">O 'handle' da linha em questão.</param>
+            <returns>Uma lista de 'handles' filhos.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SelectChildRows(DevExpress.XtraGrid.Views.Grid.GridView,System.Int32)">
+            <summary>
+            Seleciona os filhos da linha.
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pRowHandle">O 'handle' da linha em questão.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.GetSelectedData(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            Busca as linhas selecionadas.
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <returns>Uma lista de DataRow selecionadas no grid.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.GetRowsSelected``1(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            Busca as linhas selecionadas.
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <returns>Uma lista de DataRow selecionadas no grid.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.CreateFormatGridParam``1(Nampula.DI.DataBaseAdapter,System.String,System.String,System.String[])">
+            <summary>
+            Cria um parâmetro que será passado para o método FormatGrid.
+            </summary>
+            <typeparam name="T">O Tipo do objeto da coluna.</typeparam>
+            <param name="pSourceColumnName">O nome da coluna na tabela do grid.</param>
+            <param name="pDb">Objeto do banco de dados</param>
+            <param name="pElementKey">O nome do código do objeto da coluna.</param>
+            <param name="pElementValue">O nome do valor do objeto da coluna.</param>
+            <returns>Um objeto a ser passado como parâmetro.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.CreateFormatGridParam``1(System.String,System.String,System.String,System.String[])">
+            <summary>
+            Cria um parâmetro que será passado para o método FormatGrid.
+            </summary>
+            <typeparam name="T">O Tipo do objeto da coluna.</typeparam>
+            <param name="pCompanyDb">Nome do Banco de Dados da Empresa</param>
+            <param name="pSourceColumnName">O nome da coluna na tabela do grid.</param>
+            <param name="pElementKey">O nome do código do objeto da coluna.</param>
+            <param name="pElementValue">O nome do valor do objeto da coluna.</param>
+            <returns>Um objeto a ser passado como parâmetro.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FormatGrid(DevExpress.XtraGrid.Views.Grid.GridView,System.Data.DataTable,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pTable">Um DataTable tipado.</param>
+            <param name="pColumns">Colunas do Grid</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FormatGrid``1(DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter (B1).</typeparam>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pCompanyDb">O nome da empresa no SAP.</param>
+            <param name="pColumns">Lista de Columnas</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FormatGrid``1(DevExpress.XtraGrid.Views.Grid.GridView,Nampula.DI.DataBaseAdapter,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter.</typeparam>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="dataBaseAdapter">Adaptador de banco de dados</param>
+            <param name="pColumns">Uma lista de colunas.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FormatGrid``1(DevExpress.XtraGrid.Views.Grid.GridView,Nampula.DI.DataBaseAdapter,System.Boolean,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter.</typeparam>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="dataBaseAdapter">Objeto do banco de dados</param>
+            <param name="showDataSourceInformation">Exibi informações de Origem do Registros</param>
+            <param name="pColumns">Uma lista de colunas.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FormatGrid(DevExpress.XtraGrid.Views.Grid.GridView,Nampula.DI.TableAdapterFieldCollection,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com a lista de colunas passdas com parametors
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pTableColumns">Lista de Coluns da Tabela</param>
+            <param name="pColumns">Lista de Coluns</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.CreateColumn(DevExpress.XtraGrid.Views.Grid.GridView,Nampula.DI.TableAdapterFieldCollection,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata a coluna de acordo com o tipo especificado.
+            </summary>
+            <param name="pGridView">Grid</param>
+            <param name="pTableColumns">A coluna do GridView.</param>
+            <param name="pColumns">Columnas com lista suspensa.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetSelectColumn(DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.String)">
+            <summary>
+            Define uma coluna CheckBox com padrão de seleção de linhas
+            </summary>
+            <param name="pView">View da Grid</param>
+            <param name="pColumnName">Nome da coluna</param>
+            <param name="pColumnCaption">Título da coluna</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FormatColumn(DevExpress.XtraGrid.Columns.GridColumn,System.Type,System.Int32)">
+            <summary>
+            Formata a coluna de acordo com o tipo especificado.
+            </summary>
+            <param name="pCollumn">A coluna do GridView.</param>
+            <param name="pDataType">Tipo da coluna.</param>
+            <param name="maxLenth">Tamanho maximo da coluna</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FillAll``1(DevExpress.XtraGrid.Views.Grid.GridView,Nampula.DI.DataBaseAdapter)">
+            <summary>
+            Preenche o grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter.</typeparam>
+            <param name="dataBaseAdapter">Objeto do banco de dados</param>
+            <param name="pGridView">O controle GridView.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.CreateGridParam(System.Collections.Generic.Dictionary{System.Object,System.String},System.String)">
+            <summary>
+            Cria um parâmetro que será passado para o método FormatGrid.
+            </summary>
+            <param name="pDictionary">Um dicionário (int, string).</param>
+            <param name="pFieldsName">O nome do campo (chave estrangeira) relacionado.</param>
+            <returns>Um objeto do tipo KeyValuePair.</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetVisible(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Atribiu a visibilidade das colunas 
+            </summary>
+            <param name="pView">GridView</param>
+            <param name="pColumns">Nome das Colunas</param>
+            <param name="pVisible">True se visivel False se não visivel</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetEditable(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Atribui edição das colunas 
+            </summary>
+            <param name="pView">GridView</param>
+            <param name="pColumns">Nome das Colunas</param>
+            <param name="pEditable">True se Editável False se não editável</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.BindDataTable(DevExpress.XtraGrid.Views.Grid.GridView,System.Data.DataTable)">
+            <summary>
+            Popula o datasource de um GridView com um DataTable.
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pDataTable">Um objeto System.Data.DataTable</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.MoveRows(System.Data.DataRow[],System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            Move as linhas de um DataTable para outro.
+            </summary>
+            <param name="pRows">Uma lista de DataRow.</param>
+            <param name="pFrom">A tabela original.</param>
+            <param name="pTo">A tabela que recebe a linha.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetLinkedButton(DevExpress.XtraGrid.Columns.GridColumn,DevExpress.XtraEditors.Controls.ButtonPressedEventHandler,System.Boolean)">
+            <summary>
+            Adiciona uma seta laranja em uma coluna da grid.
+            </summary>
+            <param name="pColumn">Coluna que receberá a seta amarela</param>
+            <param name="pEventHandler">Evento que será disparado ao clicar na seta.</param>
+            <param name="editable">A coluna é editável ?</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetLinkedButton(DevExpress.XtraGrid.Columns.GridColumn,Nampula.UI.BoLinkedObject)">
+            <summary>
+            Adiciona uma seta laranja em uma coluna da grid para um objeto do SAP
+            </summary>
+            <param name="pColumn">Coluna que receberá a seta amarela</param>
+            <param name="pObject">objeto do SAP que será atribuído.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetColors(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            Define cor padrão, baseado no look and feel das telas do SAP
+            </summary>
+            <param name="pView">View da Grid</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetColors(DevExpress.XtraGrid.Views.Grid.GridView,System.Drawing.Color,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Atribui as cores a aparencia da grid
+            </summary>
+            <param name="pView">View da grid</param>
+            <param name="pDefaultColor">Color de fundo</param>
+            <param name="pDefaultForeColor">Color da Fonte</param>
+            <param name="pApplyRow">Aplica a linha</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.CreateMenuExport(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            Cria um menu com opções de importação na grid
+            Poderá exportar dados da grid para Excel, PDF, RTF e Texto
+            </summary>
+            <param name="pView"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.AddSelColumn(DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.String)">
+            <summary>
+            Adiciona coluna de CheckBox de seleção e define as cores de seleção padrão quando selecionado
+            </summary>
+            <param name="pView">View da Grid</param>
+            <param name="pFieldName">Nome da coluna</param>
+            <param name="pCaption">Título da coluna</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.AddSumSummary(DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.String)">
+            <summary>
+            Adiciona uma soma a colunn
+            </summary>
+            <param name="pGridView">Objeto GridVIew</param>
+            <param name="pFieldName">Nome do Campo da Grid</param>
+            <param name="displayForm">Formatação do Summary</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetAllVisible(DevExpress.XtraGrid.Views.Grid.GridView,System.Boolean)">
+            <summary>
+            Atribui a visibilidade ou não de todos os campos da grid
+            </summary>
+            <param name="gridView">Um GridView</param>
+            <param name="visibled">Um Booleando</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetAllEditable(DevExpress.XtraGrid.Views.Grid.GridView,System.Boolean)">
+            <summary>
+            Atribui a visibilidade ou não de todos os campos da grid
+            </summary>
+            <param name="gridView">Um GridView</param>
+            <param name="allowEdit">Permite edição</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.FreezeOnLeft(DevExpress.XtraGrid.Views.Grid.GridView,System.String[])">
+            <summary>
+            Atribui a visibilidade ou não de todos os campos da grid
+            </summary>
+            <param name="gridView">Um GridView</param>
+            <param name="columns">Nome dos Campos das Colunas</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.OrderByAndVisible(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.List{System.String})">
+            <summary>
+            Torna visiable as colunas e aplica a ordem passada
+            </summary>
+            <param name="gridView">GridView</param>
+            <param name="columns">Nome dos Campos das Colunas</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetVisbleOnly(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.List{System.String})">
+            <summary>
+            Torna visiable somente as colunas e aplica a ordem passada
+            </summary>
+            <param name="gridView">GridView</param>
+            <param name="columns">Nome dos Campos das Colunas</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.SetEditableOnly(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.List{System.String})">
+            <summary>
+            Torna visiable somente as colunas e aplica a ordem passada
+            </summary>
+            <param name="gridView">GridView</param>
+            <param name="columns">Nome dos Campos das Colunas</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.GridViewExtension.KeepFocusedRowHandle(DevExpress.XtraGrid.Views.Grid.GridView,System.Action,System.Func{System.Int32})">
+            <summary>
+            Mantém o foco na linha da grid enquanto atualiza os novos valores ou novos registros.
+            </summary>
+            <param name="gridView">Uma grid View</param>
+            <param name="updateRows">Método chamado para atualizar os dados da grid</param>
+            <param name="GetDataSourceRowIndex">Método chamado quando o registro eh novo, null caso não for</param>
+        </member>
+        <member name="T:Nampula.UI.Helpers.Extentions.TreeGridViewExtention">
+            <summary>
+            Extensões de métodos para o controle Nampula.UI.DataGridTreeView
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.FormatGrid``1(Nampula.UI.DataGridTreeView,Nampula.DI.DataBaseAdapter,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter.</typeparam>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pDB">Objeto do banco de dados</param>
+            <param name="pColumns">Uma lista de colunas.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.FormatGrid``1(Nampula.UI.DataGridTreeView,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com o objeto passado como parâmetro.
+            </summary>
+            <typeparam name="T">Um objeto do tipo TableAdapter (B1).</typeparam>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pCompanyDb">O nome da empresa no SAP.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.FormatGrid(Nampula.UI.DataGridTreeView,Nampula.DI.TableAdapterFieldCollection,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata as colunas do grid de acordo com a lista de colunas passdas com parametors
+            </summary>
+            <param name="pGridView">O controle GridView.</param>
+            <param name="pTableColumns">Lista de Coluns da Tabela</param>
+            <param name="pColumns">Lista de Coluns</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.CreateColumn(Nampula.UI.DataGridTreeView,Nampula.DI.TableAdapterFieldCollection,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata a coluna de acordo com o tipo especificado.
+            </summary>
+            <param name="pCollumn">A coluna do GridView.</param>
+            <param name="pDataType">Tipo da coluna.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.FormatColumn(DevExpress.XtraTreeList.Columns.TreeListColumn,System.Type)">
+            <summary>
+            Formata a coluna de acordo com o tipo especificado.
+            </summary>
+            <param name="pCollumn">A coluna do GridView.</param>
+            <param name="pDataType">Tipo da coluna.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.SetColors(Nampula.UI.DataGridTreeView)">
+            <summary>
+            Define cor padrão, baseado no look and feel das telas do SAP
+            </summary>
+            <param name="pView">View da Grid</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.SetColors(Nampula.UI.DataGridTreeView,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Atribui as cores a aparencia da grid
+            </summary>
+            <param name="pView">View da grid</param>
+            <param name="pDefaultColor">Color</param>
+            <param name="pApplyRow">Aplica a linha</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.AddSelColumn(Nampula.UI.DataGridTreeView,System.String,System.String)">
+            <summary>
+            Adiciona coluna de CheckBox de seleção e define as cores de seleção padrão quando selecionado
+            </summary>
+            <param name="pView">View da Grid</param>
+            <param name="pFieldName">Nome da coluna</param>
+            <param name="pCaption">Título da coluna</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.SetVisible(Nampula.UI.DataGridTreeView,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Atribiu a visibilidade das colunas 
+            </summary>
+            <param name="pView">GridView</param>
+            <param name="pColumns">Nome das Colunas</param>
+            <param name="pVisible">True se visivel False se não visivel</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.SetEditable(Nampula.UI.DataGridTreeView,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Atribui edição das colunas 
+            </summary>
+            <param name="pView">GridView</param>
+            <param name="pColumns">Nome das Colunas</param>
+            <param name="pEditable">True se Editável False se não editável</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.SetLinkedButton(DevExpress.XtraTreeList.Columns.TreeListColumn,DevExpress.XtraEditors.Controls.ButtonPressedEventHandler)">
+            <summary>
+            Adiciona uma seta laranja em uma coluna da grid.
+            </summary>
+            <param name="pColumn">Coluna que receberá a seta amarela</param>
+            <param name="pEventHandler">Evento que será disparado ao clicar na seta.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.TreeGridViewExtention.SetLinkedButton(DevExpress.XtraTreeList.Columns.TreeListColumn,Nampula.UI.BoLinkedObject)">
+            <summary>
+            Adiciona uma seta laranja em uma coluna da grid para um objeto do SAP
+            </summary>
+            <param name="pColumn">Coluna que receberá a seta amarela</param>
+            <param name="pObject">Evento que será disparado ao clicar na seta.</param>
+        </member>
+        <member name="F:Nampula.UI.Helpers.Extentions.ChangeLogForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.ChangeLogForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.ChangeLogForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.Helpers.Extentions.DifferencesForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.DifferencesForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.Extentions.DifferencesForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.ChooseFromListHandler">
+            <summary>
+            Evento que representa uma seleção
+            </summary>
+            <param name="sender">Objeto que disparou</param>
+            <param name="e">Argumentos do Evento</param>
+        </member>
+        <member name="T:Nampula.UI.Helpers.ChooseFromListEventArgs">
+            <summary>
+            Argumentos do Evento da Lista
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListEventArgs.Records">
+            <summary>
+            Lista de Registros Selecionados
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListEventArgs.Record">
+            <summary>
+            Registro Selecionado
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListEventArgs.SearchBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListEventArgs.Cancel">
+            <summary>
+            Indica se foi cancelado
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.ChooseFromListForm">
+            <summary>
+            Formulário para comportamento de selecionar um item na lista (ChooseFromList SDK do SAP)
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListForm.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListForm.#ctor(System.Collections.Generic.List{Nampula.UI.Helpers.FormatConditionChoose},System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Construdor
+            </summary>
+            <param name="pFormatConditions"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListForm.ShowDialog(Nampula.UI.Form)">
+            <summary>
+            Exibe a tela e so continua a execução depois que a tela for fechada
+            </summary>
+            <param name="pParent">Formulário Superior</param>
+            <returns>O Resultado do Dialogo</returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListForm.Show">
+            <summary>
+            Exibe a tela e so continua a execução depois que a tela for fechada
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListForm.Record">
+            <summary>
+            Registro selecionado
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListForm.Query">
+            <summary>
+            TableQuery do objeto
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListForm.SearchBy">
+            <summary>
+            Qual o nome da coluna será considerda na pesquisa
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListForm.VisbleColumns">
+            <summary>
+            Lista de colunas visiveis
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListForm.SearchColumns">
+            <summary>
+            Colunas que serão pesquisdas
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.Helpers.ChooseFromListForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.FormBindExtention">
+            <summary>
+            Gerenciamento de Vincula entre data source e o controle na tela
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.FillControls(System.Collections.Generic.Dictionary{System.String,System.Windows.Forms.Control},Nampula.DI.TableAdapter,System.EventHandler{Nampula.UI.Helpers.Extentions.BindChangedValueEventArgs})">
+            <summary>
+            Preenche os controles na tela
+            </summary>
+            <param name="pBinds">Lista de pares entre o controle em tela e o campo da tabela</param>
+            <param name="pTableObject">Table Adapter do Objeto</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.SetDataSourceInformation(System.Windows.Forms.Control,Nampula.DI.TableAdapterField)">
+            <summary>
+            Preenche um controle da tela
+            </summary>
+            <param name="pControl">Controle do Objeto</param>
+            <param name="pField">TableField do Objeto</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.FillControl(System.Collections.Generic.Dictionary{System.String,System.Windows.Forms.Control},Nampula.DI.TableAdapterField)">
+            <summary>
+            Preenche um controle da tela
+            </summary>
+            <param name="pBinds">Lista de pares entre o controle em tela e o campo da tabela</param>
+            <param name="pControl">Controle do Objeto</param>
+            <param name="pField">TableField do Objeto</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.FillControl(System.Windows.Forms.Control,Nampula.DI.TableAdapterField)">
+            <summary>
+            Preenche um controle da tela
+            </summary>
+            <param name="pControl">Controle do Objeto</param>
+            <param name="pField">TableField do Objeto</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.FillClass(System.Collections.Generic.Dictionary{System.String,System.Windows.Forms.Control},Nampula.DI.TableAdapter)">
+            <summary>
+            Preenche os campos da classe com os valores da tela
+            </summary>
+            <param name="pBinds">Lista de pares entre o controle em tela e o campo da tabela</param>
+            <param name="pTableObject">Table Adapter do Objeto</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.SetReadOnly(System.Collections.Generic.Dictionary{System.String,System.Windows.Forms.Control})">
+            <summary>
+            Seta os controles para somente leitura
+            </summary>
+            <param name="pBinds">Lista de controles</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.SetEnabled(System.Collections.Generic.Dictionary{System.String,System.Windows.Forms.Control},System.Boolean)">
+            <summary>
+            Atribui o flag de ativo e desativado
+            </summary>
+            <param name="pBinds">Lista de controles</param>
+            <param name="pEnabled">True para ativado e false para desativado</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.FormBindExtention.OnChangeValue(System.Collections.Generic.Dictionary{System.String,System.Windows.Forms.Control},System.EventHandler{Nampula.UI.Helpers.Extentions.BindChangedValueEventArgs})">
+            <summary>
+            Checar por atualização
+            </summary>
+            <param name="pBinds">Vínculo de atualizações</param>
+            <param name="pHandler">Evento</param>
+        </member>
+        <member name="T:Nampula.UI.Helpers.GridViewCheckBox`2">
+            <summary>
+            Ajudador que trata uma grid que tem um CheckBox.. para seleção de configurações ( Exemplo uma lista de utilizações )
+            </summary>
+            <typeparam name="TT">Um objeto TableAdapter</typeparam>
+            <typeparam name="TD">Origem dos registros</typeparam>
+        </member>
+        <member name="E:Nampula.UI.Helpers.GridViewCheckBox`2.OnBeforeSel">
+            <summary>
+            Antes de selecionar/deselecionar um registro
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Helpers.GridViewCheckBox`2.OnAfterSel">
+            <summary>
+            Depois de selecionar/deselecionar um registro
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.GridViewCheckBox`2.FieldsName">
+            <summary>
+            Nome das colunas adicionais como (Sel)
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewCheckBox`2.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewCheckBox`2.#ctor(DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            construtor padrão da da classe
+            </summary>
+            <param name="pView">GridView que será tratado</param>
+            <param name="pSelKey">Campo de <see cref="!:TT"/> que defini qual o campo será comparado com pDataSourceKey para determinar se um registro está selecionado</param>
+            <param name="pDataSourceKey">Campo de <see cref="!:TD"/> que defini qual o campo será comparado com pSelKey para determinar se um registro está selecionado</param>
+            <param name="pVisibleColumns">Lista de Colunas Visiveis</param>
+            <param name="pColumns">Lista de Colunas com registros relacionados</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewCheckBox`2.SetDataSource(System.Collections.Generic.List{`1})">
+            <summary>
+            Origem dos Registros da grid
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewCheckBox`2.RecordSels">
+            <summary>
+            Lista de Registros selecionados
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewCheckBox`2.CheckRecords(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Atribui true a coluna sel se houver na coleção sels
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewCheckBox`2.AddSelColumn(System.Collections.Generic.ICollection{`1})">
+            <summary>
+            Verifica se existe a coluna Sel no datasource , se não existir cria uma
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewCheckBox`2.FormatGrid(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Formata a grid, cria as coluna da grid
+            </summary>
+            <param name="pView">View da Grid</param>
+            <param name="pVisbleColumns">Lista de Coluns que serão visiveis</param>
+            <param name="pColumns">Colunas que tem dados relacionados</param>
+        </member>
+        <member name="T:Nampula.UI.Helpers.GridViewEditableEventArgs">
+            <summary>
+            Argumento dos eventos da GridViewEditable
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewEditableEventArgs.item">
+            <summary>
+            Elemeto alterado.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewEditableEventArgs.Cancel">
+            <summary>
+            Cancelar o processo.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.IChooseFromListFormBase">
+            <summary>
+            Interface para desenvolvimento de formulário personalizado de pesquisa de registros 
+            relacionados chamados de ChooseFromList
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.Text">
+            <summary>
+            Nome da Tela de pesquisa
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.Record">
+            <summary>
+            Registro Selecionado na tela
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.Records">
+            <summary>
+            Quando a seleção for multila serão retornado 2 registros
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.Query">
+            <summary>
+            Objeto que representa a consulta a ser realizada na tela
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.SearchBy">
+            <summary>
+            Texto da pesquisa 
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.FieldNotOrderBy">
+            <summary>
+            Ordenar 
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.VisbleColumns">
+            <summary>
+            Colunas que serão exibidas ao abrir a tela
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.SearchColumns">
+            <summary>
+            Colunas que serão pesquiadas
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.IChooseFromListFormBase.AllowSelectionsMultiples">
+            <summary>
+            Permitir multiplas seleções de registros
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.IChooseFromListFormBase.ShowDialog(Nampula.UI.Form)">
+            <summary>
+            Exibe o formulário de pesquisa e aguarda o mesmo ser fechado
+            </summary>
+            <param name="pOwnerForm">Formulário que chamou a pesquisa</param>
+            <returns>Resultado da pesquisa, cancelado ou selecionado</returns>
+        </member>
+        <member name="T:Nampula.UI.Helpers.ChooseFromListHelper">
+            <summary>
+            Classe que ajuda a trabalhar com registros relacionadas na tela
+            : o famoso ChooseFromList
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Helpers.ChooseFromListHelper.AfterTryGetRecord">
+            <summary>
+            Antes de tentar buscar algum registro
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Helpers.ChooseFromListHelper.BeforeTryGetRecord">
+            <summary>
+            Depois de buscar o regitro
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor">
+            <summary>
+            Construtor Interno
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(Nampula.UI.EditText,Nampula.UI.EditTextButton,Nampula.DI.TableQuery,System.String,System.String,System.String)">
+            <summary>
+            Construtor para habilitar os recursos de choose em um cenário
+            </summary>
+            <param name="ptxtId">EditText do ID</param>
+            <param name="ptxtDescription">EditText do Description</param>
+            <param name="pQuery">Query que será executada</param>
+            <param name="pFieldId">Nome Campo do ID</param>
+            <param name="pFieldName">Nome do Campo do Description</param>
+            <param name="pWindowText">Nome da Janela quando pesquisa</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(Nampula.UI.EditText,Nampula.UI.EditTextButton,System.Collections.Generic.List{Nampula.UI.Helpers.FormatConditionChoose},Nampula.DI.TableQuery,System.String,System.String,System.String,System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            
+            </summary>
+            <param name="ptxtId"></param>
+            <param name="ptxtDescription"></param>
+            <param name="pFormatConditions"></param>
+            <param name="pQuery"></param>
+            <param name="pFieldId"></param>
+            <param name="pFieldName"></param>
+            <param name="pWindowText"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(Nampula.UI.EditText,Nampula.UI.EditTextButton,System.Collections.Generic.List{Nampula.UI.Helpers.FormatConditionChoose},Nampula.DI.TableQuery,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ptxtId"></param>
+            <param name="ptxtDescription"></param>
+            <param name="pFormatConditions"></param>
+            <param name="pQuery"></param>
+            <param name="pFieldId"></param>
+            <param name="pFieldName"></param>
+            <param name="pWindowText"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(Nampula.UI.EditText,Nampula.UI.EditTextButton,Nampula.DI.TableQuery,Nampula.DI.eCondition,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ptxtId"></param>
+            <param name="ptxtDescription"></param>
+            <param name="pQuery"></param>
+            <param name="pConditionQuery"></param>
+            <param name="pFieldId"></param>
+            <param name="pFieldName"></param>
+            <param name="pWindowText"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(DevExpress.XtraGrid.Columns.GridColumn,DevExpress.XtraGrid.Columns.GridColumn,Nampula.DI.TableQuery,System.String,System.String,System.String)">
+            <summary>
+            Construtor para habilitar os recursos de choose em um cenário
+            </summary>
+            <param name="idColumn">EditText do ID</param>
+            <param name="ptxtDescription">EditText do Description</param>
+            <param name="pQuery">Query que será executada</param>
+            <param name="pFieldId">Nome Campo do ID</param>
+            <param name="pFieldName">Nome do Campo do Description</param>
+            <param name="pWindowText">Nome da Janela quando pesquisa</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(DevExpress.XtraGrid.Columns.GridColumn,DevExpress.XtraGrid.Columns.GridColumn,System.Collections.Generic.List{Nampula.UI.Helpers.FormatConditionChoose},Nampula.DI.TableQuery,System.String,System.String,System.String)">
+            <summary>
+            Construtor para habilitar os recursos de choose em um cenário
+            </summary>
+            <param name="idColumn">EditText do ID</param>
+            <param name="ptxtDescription">EditText do Description</param>
+            <param name="pFormatConditions">Conjunto de cores personalziadas para grid do choose</param>
+            <param name="pQuery">Query que será executada</param>
+            <param name="pFieldId">Nome Campo do ID</param>
+            <param name="pFieldName">Nome do Campo do Description</param>
+            <param name="pWindowText">Nome da Janela quando pesquisa</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn,DevExpress.XtraTreeList.Columns.TreeListColumn,Nampula.DI.TableQuery,System.String,System.String,System.String)">
+            <summary>
+            Construtor para habilitar os recursos de choose em um cenário.
+            </summary>
+            <param name="pId">Coluna de Código.</param>
+            <param name="pDescription">Coluna de Descrição.</param>
+            <param name="pQuery">TableQuery com os filtros.</param>
+            <param name="pFieldId">Nome da coluna com o código.</param>
+            <param name="pFieldName">Nome da coluna com a descrição.</param>
+            <param name="pWindowText">Título da janela.</param>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.ViewSearch">
+            <summary>
+            Caso for view armazena a view
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.FieldNameId">
+            <summary>
+            Nome do Campo ID 
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.FieldNameDescription">
+            <summary>
+            Nome do Campo da Descrição
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.WindowText">
+            <summary>
+            Descrição da Janela de Pesquisa
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.Query">
+            <summary>
+            Query de consulta
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.ConditionQuery">
+            <summary>
+            Condição para consulta
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.VisbleColumns">
+            <summary>
+            Colunas que serão visiveis para o usuário
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.WhereColumns">
+            <summary>
+            Colunas que serão pesquisa ao digitar em algum campo
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.FormChoose">
+            <summary>
+            Formulário de ChooseFromList
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.FieldNotOrderBy">
+            <summary>
+            Ordenar 
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.ChooseFromListHelper.AllowSelectionsMultiples">
+            <summary>
+            Permitir selecionar mais de um item
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.LostFocus(System.Boolean,System.Object)">
+            <summary>
+            Comportamento do Choose quando o controle perder o focu
+            </summary>
+            <param name="pIsDescriptionField"></param>
+            <param name="pValue"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.TryGetRecord(System.Boolean,System.Object,System.Boolean,System.Data.DataRow@)">
+            <summary>
+            Tenta obter um registro através da pesquisa passada
+            </summary>
+            <param name="pIsDescriptionField">O Campo Id é descrição do texto</param>
+            <param name="pTextSearch">Texto de Pesquisa</param>
+            <param name="pShowForm">Exibir formulário</param>
+            <param name="pRow">Linha Corrente de pesquisa</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Helpers.ChooseFromListHelper.GetBySearchForm(System.String,Nampula.UI.Helpers.ChooseFromListEventArgs@)">
+            <summary>
+            Pega o registro através do formulário
+            </summary>
+            <param name="pFieldName">Nome do Campo que está sendo pesquisado</param>
+            <param name="args">Argumentos do Evento gerado</param>
+            <returns>True se pesquisou com sucesso</returns>
+        </member>
+        <member name="T:Nampula.UI.Helpers.GridViewEditable`1">
+            <summary>
+            Tem como objetivo gerenciar grids de configurações, Exemplo: Grupo de Parceiro, 
+            </summary>
+            <typeparam name="t">Um Table Adapter</typeparam>
+        </member>
+        <member name="E:Nampula.UI.Helpers.GridViewEditable`1.OnChangeList">
+            <summary>
+            Evento disparado quando há uma alteração na coleção de registro (Remoção, Alteração, Adição e Atualização)
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Helpers.GridViewEditable`1.OnAddList">
+            <summary>
+            Evento disparado quando há uma adição na lista
+            </summary>
+        </member>
+        <member name="E:Nampula.UI.Helpers.GridViewEditable`1.OnRemoveList">
+            <summary>
+            Evento disparado quando há uma remoção de um item da lista
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewEditable`1.#ctor(DevExpress.XtraGrid.Views.Grid.GridView,System.Collections.Generic.List{`0},System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.Dictionary{System.Object,System.String}}[])">
+            <summary>
+            Construtor
+            </summary>
+            <param name="pGridView"></param>
+            <param name="cmdOk"></param>
+            <param name="cmdCancel"></param>
+            <param name="pEditableColumns"></param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewEditable`1.SetOptions">
+            <summary>
+            Atribui as opções das opções
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewEditable`1.GridView">
+            <summary>
+            GridView daas Colunas
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewEditable`1.Lines">
+            <summary>
+            Linhas da grid
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewEditable`1.Columns">
+            <summary>
+            Lista de Colunas de Relação com outras colunas
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewEditable`1.InitializeBeahvior">
+            <summary>
+            Inicializar o processamento de todo o comportamento da tela
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.GridViewEditable`1.CreatePopupMenu">
+            <summary>
+            Cria o menu popup da grid
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Helpers.GridViewEditable`1.ReadOnly">
+            <summary>
+            Determina que a grid será para leitura apenas
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.Helpers.MessageExceptionForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.MessageExceptionForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.MessageExceptionForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.WaitingStatusForm">
+            <summary>
+            Formulário que exibe uma mensagem de espera
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.WaitingStatusForm.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.WaitingStatusForm.SetMessage(System.String)">
+            <summary>
+            Atribui uma mensagem para ser exibido na tela de progresso
+            </summary>
+            <param name="message">Uma string com a mensagem</param>
+        </member>
+        <member name="F:Nampula.UI.Helpers.WaitingStatusForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Helpers.WaitingStatusForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.Helpers.WaitingStatusForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Helpers.WaitingStatusHelper">
+            <summary>
+            Exibir formulário de processamento demorado
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.SqlUserLoggin.SqlUserProvider">
+            <summary>
+            Provedor e atualizador de usuários de conexão com o banco de dados
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.SqlUserLoggin.SqlUserProvider.#ctor(SAPbobsCOM.Company,System.String)">
+            <summary>
+            Construtor Padrão do Provedor de SqlServer Login
+            </summary>
+            <param name="sboCompany">Classe de Conexão com o SAP</param>
+            <param name="installationId">Codigo da Instalação</param>
+        </member>
+        <member name="F:Nampula.UI.SqlUserLoggin.UserFieldsDataForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.SqlUserLoggin.UserFieldsDataForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.SqlUserLoggin.UserFieldsDataForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.SqlUserLoggin.UserFieldsData">
+            <summary>
+            Dados do Usuário
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.SqlUserLoggin.UserFieldsData.UserName">
+            <summary>
+            Dados do Usuário
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.SqlUserLoggin.UserFieldsData.PassWord">
+            <summary>
+            Senha do Usuário
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.SqlUserLoggin.UserFieldsData.IsHosted">
+            <summary>
+            IsHosted
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.SqlUserLoggin.UserFieldsData.Validate">
+            <summary>
+            Valida os campos de usuário e senha
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.WinAPI.GetParentWindowHandlerByName(System.String,System.String)">
+            <summary>
+            Pega o handle de uma janela do windows
+            </summary>
+            <param name="pSapWindowName">Nome a Janela</param>
+            <returns>Um handle da janela</returns>
+        </member>
+        <member name="T:Nampula.UI.FormSystemManager">
+            <summary>
+            Classe que gerencia as classe de FormSystem
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormSystemManager.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormSystemManager.Instance">
+            <summary>
+            Pega a insancia da classe
+            </summary>
+            <returns>uma instancia da classe FormSytemManager</returns>
+        </member>
+        <member name="P:Nampula.UI.FormSystemManager.Forms">
+            <summary>
+            Lista de Formulários que devem ser ouvidos
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormSystemManager.FormOpens">
+            <summary>
+            Lista de Fromulários que vem estão abertos
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormSystemManager.AppSAP">
+            <summary>
+            Objeto Application do SAP
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormSystemManager.FormSystemModal">
+            <summary>
+            Permite eventos somente desse formulário Formulário
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormSystemManager.AddFormWath(Nampula.UI.FormSystem)">
+            <summary>
+            Adicionar uma Formulário de Sistema a lista de formulário ouvintes
+            </summary>
+            <param name="pForm">Um Formulário</param>
+        </member>
+        <member name="M:Nampula.UI.FormSystemManager.AddFormOpen(Nampula.UI.FormSystem)">
+            <summary>
+            Adicionar uma Formulário de Sistema a lista de formulário já abertos
+            </summary>
+            <param name="pForm">Um Formulário</param>
+        </member>
+        <member name="M:Nampula.UI.FormSystemManager.SAPApp_ItemEvent(System.String,SAPbouiCOM.ItemEvent@,System.Boolean@)">
+            <summary>
+            Método que é excutado quando evento do SAP é disparado
+            </summary>
+            <param name="FormUID">ID do Formuário</param>
+            <param name="pVal">Argumentos do Evento</param>
+            <param name="BubbleEvent">Propagar a continuação desse evento</param>
+        </member>
+        <member name="F:Nampula.UI.FormSystemManager.pBubbleEvent">
+            <summary>
+            Isso é feio mas vou corrigir quando tiver tempo viu !
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.FormSystemEventAttribute">
+            <summary>
+            Atributo usado para marcar um método para receber um evento do SAP
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.IApplication">
+            <summary>
+            Uma implementação de aplicação
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.IApplication.StartApplication(System.String)">
+            <summary>
+            Inicia uma conexão com a instancia do SAP
+            </summary>
+            <param name="pNameSpace">Aplicação</param>
+            <returns>True if connected</returns>
+        </member>
+        <member name="P:Nampula.UI.IApplication.AddonIdentifiers">
+            <summary>
+            Lista de Addon Identifiers, para ser gerado sem licença
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.IApplication.IsHostedEnvironment">
+            <summary>
+            Identifica se o SAP está rodando sobre o CCC
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Permissions.Permission">
+            <summary>
+            Gerenciamento de Permissões de Acessos
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Permissions.Permission.HasPermission(System.String,Nampula.DI.B1.UserPermissions.PermissionType,System.Boolean)">
+            <summary>
+            Verifica se o usuário conectado tem acesso ao recurso
+            </summary>
+            <exception cref="T:System.Exception">Caso o usuário não tiver autorização dispara uma exçecão</exception>
+            <param name="pPermId">ID da Permissão</param>
+            <param name="accessRequest">Permissão requerida</param>
+            <param name="throwException">Gera Exceção</param>
+        </member>
+        <member name="M:Nampula.UI.Permissions.Permission.HasPermission(System.String,Nampula.DI.B1.UserPermissions.PermissionType,System.String,System.String,System.Boolean)">
+            <summary>
+            Verifica se o usuário tem acesso ao recurso
+            </summary>
+            <exception cref="T:System.Exception">Caso o usuário não tiver autorização dispara uma exçecão</exception>
+            <param name="pPermId">ID da Permissão</param>
+            <param name="accessRequest">Permissão requerida</param>
+            <param name="userName">Empresa</param>
+            <param name="companyDb">Banco de dados da empresa</param>
+            <param name="throwException">Gera Exceção</param>
+        </member>
+        <member name="M:Nampula.UI.Permissions.Permission.CheckForNewPermission(Nampula.DI.B1.UserPermissions.UserAutorizationTree)">
+            <summary>
+            Verifica se é necessáiro adicionar permissões do usuário no SAP
+            se existirem adiciona novas
+            </summary>
+            <param name="pAutorizations">A autorização raiz da aplicação</param>
+        </member>
+        <member name="M:Nampula.UI.Permissions.Permission.CheckForNewPermission(System.Collections.Generic.List{Nampula.DI.B1.UserPermissions.UserAutorizationTree})">
+            <summary>
+            Verifica se é necessáiro adicionar permissões do usuário no SAP
+            se existirem adiciona novas
+            </summary>
+            <param name="pAutorizations">Uma lista de autorizações</param>
+        </member>
+        <member name="T:Nampula.UI.Properties.Resources">
+            <summary>
+              Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ResourceManager">
+            <summary>
+              Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Culture">
+            <summary>
+              Substitui a propriedade CurrentUICulture do thread atual para todas as
+              pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Administration">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.AdministrationFocus">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Banking">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.BankingFocus">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Bottom">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.brwb">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.brwbP">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.btnChooseFromTree">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.btnChooseFromTreePressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.BusinessPartners">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ButtonBack">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CheckBox_Ambig_Dis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CheckBox_Ambig_Enabled">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CheckBox_Selected_Dis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CheckBox_Selected_Enabled">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CheckBox_Unselected_Dis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CheckBox_Unselected_Enabled">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Chk_Sel_Enabled">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Choose_Down">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Choose_Up">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ChooseFromLstBtn">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ChooseFromLstBtnPresses">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CloseBut">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CloseButD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CloseButFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ComboArrow">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ComboArrowFocused">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSDown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSDownDis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSDownF">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSDownSel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSDownSelDis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSDownSelF">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSUpDis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSUpF">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSUpSel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSUpSelDis">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.CSUpSelF">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.DBCoreName">
+            <summary>
+              Consulta uma cadeia de caracteres localizada semelhante a DBCore.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.DocNumber">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.document_excel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.document_export">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.document_pdf">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.document_text">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.document_word">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.down">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.error">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.error1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Financials">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.FolderClose">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.FolderCloseFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.FolderOpen">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.FolderOpenFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.folVerde">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gears">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gears1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridADown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridAUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridCINDheader">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridheader">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridheaderbord">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridheaderborder">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.gridheaderbottomborded">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HDubleArrowDown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HDubleArrowUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HoScrollBarChanel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HoThumbMiddle">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HoThumbRight">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HoThumpLeft">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HR">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HScrollbar">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HThumb">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HThumbBotton">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HThumbMiddle">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HThumpTop">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.HTMLPageHS">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ImageButtonBack">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ImageButtonBackPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.info">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.InformationBifpict">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Inventory">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.InventoryFocus">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.jama_pic1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.jama_pic11">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LastLevel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LastLevelFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Left">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LeftCor">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LevCloseVerde">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LevopenVerde">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LinkBtn">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LinkBtnPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LoginLogoSide">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.LoginLogoSide1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.loginPict">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.loginPict1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.loginPict2">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MAinMenuTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MaxBut">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MaxButD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MaxButFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MenuGroupMOver">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MenuGroupSel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MenuItem">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.message_ico_exclamation">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.message_ico_information">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.message_ico_question">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MessageError">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MessageInfo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MessageQuestion">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MinBut">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MinButD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MinButFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ModuleHighLight">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ModuleOn">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ModuleS">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MRP">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MSBackSel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MSBackUnsel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MSLockScreemSel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MSLockScreemUnsel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MsLockUico">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MsLunchUico">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.MSLunchUnsel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSDown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSDownPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSIco">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSLeft">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSLeftPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSRight">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSRightPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NSUpPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.NumberSelector">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.obtnCH">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.obtnDIS">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.obtnDISCH">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.obtnUNCH">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ODoubleArrowLeft">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ODoubleArrowRight">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.OTLeft">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.OTmiddle">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.OTMiddleB">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.OTRight">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Production">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.pt_BR">
+            <summary>
+              Consulta um recurso localizado do tipo System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Purchasing">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Reports">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.RestoreBut">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.RestoreButFo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Right">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.RightCor">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.rowheadear">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Sales">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SalesFocus">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SalesOportunities">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SAPLoginLogo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SAPLoginLogo1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SAPlogo">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.scrollDown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.scrollDownPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.scrollLeft">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.scrollRight">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.scrollUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.scrollUpPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SEDown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SEDownFocused">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SEDownPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.selAfterUnsel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.selFirstTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.selLastTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.selMiddleTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.selTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.selTabSec">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Service">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SEUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SEUpFocused">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.SEUpPressed">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Spash_do_SAP">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_ADD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_ADD_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_BASEDOC">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_BASEDOC_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_CALENDAR">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_CALENDAR_CHECKED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_context">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_EMAIL">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_EMAIL_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_EXCEL">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_EXCEL_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FAX">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FAX_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FILTERTABLE">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FILTERTABLE_CHECKED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FILTERTABLE_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FIND">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FIND_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FIRST">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FIRST_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FORMSETTINGS">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_FORMSETTINGS_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_GROSSPROFIT">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_GROSSPROFIT_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_HELP">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_HELP_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_LAST">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_LAST_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_LOCK">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_LOCK_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_LUNCH">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_LUNCH_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_MESSAGES">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_MESSAGES_CHECKED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_NEXT">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_NEXT_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PAYMENT">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PAYMENT_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PREVIOUS">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PREVIOUS_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PRINT">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PRINT_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PRINTLAYOUT">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PRINTLAYOUT_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PRINTPREVIEW">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_PRINTPREVIEW_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_QUERRYMANAGER">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_QUERRYMANAGER_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_SMS">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_SMS_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_SORTTABLE">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_SORTTABLE_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_TARGETDOC">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_TARGETDOC_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_TRANSACTION">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_TRANSACTION_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_VWCALCULATION">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_VWCALCULATION_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_WORD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.t_WORD_DISABLED">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TitleCorn">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TitleCornD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TitleIcon">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TitleIconD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TitleIconMF">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.Ttitlu">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TtitluD">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.TtitluD1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselFirstSATab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselFirstTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselLastTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselMiddleSATab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselMiddleSBTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselTab">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselTab_first">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.unselTabAfterUnsel">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.up">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.up1">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ViewDown">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.ViewUp">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Properties.Resources.VRScrollBar">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.FormSystem">
+            <summary>
+            Classe para trabalhar com Formulário do SAP
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.FormSystem.MethodInfoEvent">
+            <summary>
+            Classse de apoio a escuta de eventos
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Instancia uma classe de formulário
+            </summary>
+            <param name="pFormID">ID do Formulário que se deseja instanciar</param>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.#ctor(System.Int32)">
+            <summary>
+            Instancia uma classe de formulário
+            </summary>
+            <param name="pFormID">ID do Formulário que se deseja instanciar</param>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.#ctor(SAPbouiCOM.BoFormBorderStyle)">
+            <summary>
+            Formulário Customizado
+            </summary>
+            <param name="pType"></param>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.GetEvents">
+            <summary>
+            Captura todos os eventos da classe 
+            e adiciona escuta para os objetos do SAP
+            e pega o formulário do SAP
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.DoEvent(SAPbouiCOM.ItemEvent@,System.Boolean@)">
+            <summary>
+            Faz um evento ser disparado
+            </summary>
+            <param name="pVal">Argumentos do Eventos que está sendo disparado</param>
+            <param name="BubbleEvent">Caso queira parar o evento set false, true o evento continua</param>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.DoEvent(Nampula.UI.ItemEvent,System.Boolean@)">
+            <summary>
+            Faz um evento ser disparado
+            </summary>
+            <param name="pVal1">Argumentos do Eventos que está sendo disparado</param>
+            <param name="BubbleEvent">Caso queira parar o evento set false, true o evento continua</param>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.AddItem(System.String,SAPbouiCOM.BoFormItemTypes)">
+            <summary>
+            Adiciona um novo item ao formulário
+            </summary>
+            <param name="ItemUID">ID do Item</param>
+            <param name="pItemType">Tipo do Item</param>
+            <returns>Um novo item</returns>
+        </member>
+        <member name="M:Nampula.UI.FormSystem.GetItem(System.String)">
+            <summary>
+            Pega um item existente no formulário
+            </summary>
+            <param name="ItemUID">ID do Item</param>
+            <returns>O objeto do item passado</returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationSAP.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ApplicationSAP.GetMdiWindowHandle">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationSAP.MainForm">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationSAP.MessageBox(System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,Nampula.UI.Form)">
+            <summary>
+            Mensagem
+            </summary>
+            <param name="text"></param>
+            <param name="buttons"></param>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nampula.UI.ApplicationSAP.AddonIdentifiers">
+            <summary>
+            Identificadores do Aplicativo
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.ComboBox">
+            <summary>
+            Componente combobox
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.ComboBox.FieldsName">
+            <summary>
+            Nome do campo
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.ComboBox.Description">
+            <summary>
+            Descrições dos campos
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ComboBox.DataSourceInformation">
+            <summary>
+            Informações fonte de dados
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ComboBox.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ComboBox.Selected">
+            <summary>
+            Item Selecionado
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ComboBox.ValidValues">
+            <summary>
+            Valores válidos para o combox
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ComboBox.ShowTextCombo">
+            <summary>
+            O que deve ser exibido no combo box
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ComboBox.ValueAlign">
+            <summary>
+            Alinhamento do Valor
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ComboBox.Select(System.Object,Nampula.UI.BoSearchKey)">
+            <summary>
+            Seleciona um item no comboBox
+            </summary>
+            <param name="index">Indice a ser selecionado</param>
+            <param name="searchKey">Qual o campo deve ser considerado como indcie</param>
+        </member>
+        <member name="M:Nampula.UI.ComboBox.AddNoCurrentSelect">
+            <summary>
+            Adicionar um item Fake para nenhuma seleção
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ComboBox.SelectNoCurrent">
+            <summary>
+            Selecionar o item fake de nenhum seleção
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.EditTextCalc.DataSourceInformation">
+            <summary>
+            Informações da fonte de dados
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Form">
+            <summary>
+            Formulário padrão da Nampula
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Form.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Form.ShowMessageError(System.Exception,System.Boolean)">
+            <summary>
+            Exibe uma mensagem de erro encontrada dentro da exceção
+            </summary>
+            <param name="exception">Exceção</param>
+            <param name="showStackTace">Exibe ou não o StackTrace da origem do erro</param>
+        </member>
+        <member name="M:Nampula.UI.Form.SetTextOnStatusBar(System.String,Nampula.UI.BoMessageTime,Nampula.UI.BoStatusBarMessageType)">
+            <summary>
+            Exibe um texto na parte debaixo da tela do SAP (Status bar)
+            </summary>
+            <param name="text">Texto que deseja exibir</param>
+            <param name="seconds">tempo de exibição</param>
+            <param name="type">Tipo de Mensagem</param>
+        </member>
+        <member name="M:Nampula.UI.Form.ShowSucessfullMessage(System.String)">
+            <summary>
+            Exibe uma mensagem de sucesso.
+            </summary>
+            <param name="message">Mesagem que deseja exibir</param>
+        </member>
+        <member name="P:Nampula.UI.Form.ShowInTaskbar">
+            <summary>
+            Faz com que não exiba a tela na barra de tarefas
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Form.Show">
+            <summary>
+            Exebi o formulário
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Form.Show(System.Boolean)">
+            <summary>
+            Exobe o formulário de forma nativa
+            </summary>
+            <param name="pNative">Informa se for nativa (.net) ou da nampula</param>
+        </member>
+        <member name="M:Nampula.UI.Form.ShowDialog">
+            <summary>
+            NÃO USAR ESSE METODO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Form.ShowDialog(System.Boolean)">
+            <summary>
+            NÃO USAR ESSE METODO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.Form.ShowDialog(Nampula.UI.Form)">
+            <summary>
+            Exibe o formulário e aguarda o mesmo fechar para saber o resultado.
+            </summary>
+            <param name="pParent">Qual formulário pai ou dono</param>
+            <returns>O resultado do formulário</returns>
+        </member>
+        <member name="M:Nampula.UI.Form.MessageBox(System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            Exibe uma mensagem de texto na tela
+            </summary>
+            <param name="message">Mensagem que deseje exibir</param>
+            <param name="buttons">Botões que serão visualizados na tela</param>
+            <param name="icon">Ícone que será exido depois da mensagem</param>
+            <returns></returns>
+        </member>
+        <member name="P:Nampula.UI.Form.Visible">
+            <summary>
+            Exibe ou oculta o formulário
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.Form.FormMode">
+            <summary>
+            Modo corrente do formulário
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Form.UpdateFormMode(Nampula.UI.Button,Nampula.UI.BoFormMode)">
+            <summary>
+            Atualiza o modo do formuário
+            </summary>
+            <param name="pOk">Botão de Salvar</param>
+            <param name="pBoFormMode"></param>
+        </member>
+        <member name="M:Nampula.UI.Form.SetTextButton(Nampula.UI.Button,Nampula.UI.BoFormMode)">
+            <summary>
+            Atualiza o Texto do Botão conforme o modo do formulário
+            </summary>
+            <param name="pButton"></param>
+            <param name="pState"></param>
+        </member>
+        <member name="F:Nampula.UI.Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.FormChooseFromList`1">
+            <summary>
+            Formulário de ChooseFromList
+            </summary>
+            <typeparam name="TT"></typeparam>
+        </member>
+        <member name="M:Nampula.UI.FormChooseFromList`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.Collumns">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.DefaultSearch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.TableQuery">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.ChooseCollumns">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.TableAdapter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.SelectedRow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormChooseFromList`1.ShowDialog(Nampula.UI.Form)">
+            <summary>
+            
+            </summary>
+            <param name="pParent"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Nampula.UI.FormChooseFromList`1.SearchBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.FormChooseFromList`1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.FormChooseFromList`1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.FormChooseFromList`1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.frmMessageBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.frmMessageBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.frmMessageBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.Button">
+            <summary>
+            Um botão na tela
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.CheckBox">
+            <summary>
+            Um CheckBox
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.CheckBox.DataSourceInformation">
+            <summary>
+            Informações da fonte de dados
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.ChooseButton">
+            <summary>
+            Um botão de choose
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ChooseButton.#ctor">
+            <summary>
+            Construção Padrão
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.ComboBoxSimple">
+            <summary>
+            Componente combobox
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ComboBoxSimple.DataSourceInformation">
+            <summary>
+            Informações fonte de dados
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ComboBoxSimple.#ctor">
+            <summary>
+            Construtor padrão
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.GridValidValuesColumn">
+            <summary>
+            UMa coluna no estilo combobox de um treeviewe
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.GridValidValuesColumn.#ctor">
+            <summary>
+            Cria uma nova coluna do tipo RepositoryItemLookUpEdit
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.GridValidValuesColumn.ValidValues">
+            <summary>
+            Valore válidos da coluna
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.TreeGridValidValuesColumn">
+            <summary>
+            UMa coluna no estilo combobox de um treeviewe
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.TreeGridValidValuesColumn.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn)">
+            <summary>
+            Cria uma nova coluna do tipo RepositoryItemLookUpEdit
+            </summary>
+            <param name="pCollumn">Coluna que será aplicado o combo</param>
+        </member>
+        <member name="P:Nampula.UI.TreeGridValidValuesColumn.ValidValues">
+            <summary>
+            Valore válidos da coluna
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.ValidValue">
+            <summary>
+            Classe elemento de uma coleção de valores para ser usando em um combo
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ValidValue.#ctor(System.Object,System.String)">
+            <summary>
+            Instancia o elemento e atribu os valores ao mesmo
+            </summary>
+            <param name="pValue">Chave</param>
+            <param name="pDescription">Descrição</param>
+        </member>
+        <member name="P:Nampula.UI.ValidValue.Value">
+            <summary>
+            Valor do elemento
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ValidValue.Description">
+            <summary>
+            Descrição do elemento
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ValidValue.ToString">
+            <summary>
+            Converte para string
+            </summary>
+            <returns>UM string com o valor e a descrição</returns>
+        </member>
+        <member name="T:Nampula.UI.ValidValues">
+            <summary>
+            Classe responsável por mantes uma lista de valores válidos
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.ValidValues.Count">
+            <summary>
+            Quantidad de itens na coleção
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ValidValues.Add(System.Object,System.String)">
+            <summary>
+            Adiciona um novo elemento a coleção
+            </summary>
+            <param name="Value">Chave</param>
+            <param name="Description">Descrição</param>
+            <returns>O novo item que foi adicionado</returns>
+        </member>
+        <member name="M:Nampula.UI.ValidValues.Item(System.Int32)">
+            <summary>
+            Pego o item pelo indice da coleção
+            </summary>
+            <param name="Index">Indice da coleção</param>
+            <returns>Retorna o valor da colecão</returns>
+        </member>
+        <member name="M:Nampula.UI.ValidValues.Remove(System.Object,Nampula.UI.BoSearchKey)">
+            <summary>
+            Remove um elemento da coleção
+            </summary>
+            <param name="Index">Chave ou Indice</param>
+            <param name="pSearchKey">Método de pesquisa da chave</param>
+        </member>
+        <member name="M:Nampula.UI.ValidValues.GetIndex(System.Object,Nampula.UI.BoSearchKey)">
+            <summary>
+            Pega o íncido do elemento da coleção
+            </summary>
+            <param name="pIndex">Indice ou chave</param>
+            <param name="pSearchKey">Método de pesquisa da chave</param>
+            <returns>Um inteiro contendo o indice da coleção</returns>
+        </member>
+        <member name="M:Nampula.UI.ValidValues.Clear">
+            <summary>
+            Limpa todos os elementos da coleção
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.DataGrid">
+            <summary>
+            Data grid
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.DataGrid.#ctor">
+            <summary>
+            Data Grid
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.DataGrid.DataGrid_Load(System.Object,System.EventArgs)">
+            <summary>
+            método do evento disparado ao carregar um grid
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Nampula.UI.DataGrid.GetRegistry(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            Pega o caminho do registro para ser salvo o layout
+            </summary>
+            <param name="pView">Uma View</param>
+            <returns>Uma string com o caminho do registro</returns>
+        </member>
+        <member name="M:Nampula.UI.DataGrid.GetRegistryPath">
+            <summary>
+            Obter caminho do registro no windows das customizações da gridview corrente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nampula.UI.DataGrid.SetGridFormat(DevExpress.XtraGrid.Columns.GridColumn,Nampula.UI.BoDataType)">
+            <summary>
+            Formata a coluna da grid de acordo com um tipo
+            </summary>
+            <param name="pCollumn">Uma coluna</param>
+            <param name="pDataType">tipo da coluna</param>
+        </member>
+        <member name="M:Nampula.UI.DataGrid.SetGridFormat(DevExpress.XtraGrid.Columns.GridColumn,Nampula.UI.BoDataType,System.Int32)">
+            <summary>
+            Formata a coluna da grid de acordo com um tipo
+            </summary>
+            <param name="pCollumn">Uma coluna</param>
+            <param name="pDataType">Tipo de Coluna</param>
+            <param name="pDecimalPlaces">Casas decimais</param>
+        </member>
+        <member name="P:Nampula.UI.EditDateTime.DataSourceInformation">
+            <summary>
+            Informações da fonte de dados
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.EditMemo.DataSourceInformation">
+            <summary>
+            Informações da fonte de dados
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.OptionBtn.DataSourceInformation">
+            <summary>
+            Informações da fonte de dados
+            </summary>
+        </member>
+        <member name="T:Nampula.UI.StaticText">
+            <summary>
+            Componente que mostra texto estático lincado um textBox
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.StaticText.LinkedTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nampula.UI.StaticText.AutoSize">
+            <summary>
+            Auto redimencionar o controle
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.MenuItem.Activate">
+            <summary>
+            Realiva um clique no item do menu
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.ApplicationWinForm.ConnectToDI(System.Boolean)">
+            <summary>
+            Faz uma validação de conexão a DI API 
+            </summary>
+            <param name="pUseCahe">Caso queira usar um cache ( Lista de Usuário ) true , se não quiser usar ( false ) </param>
+            <returns>True - para conectado com sucesso, false para não conectado </returns>
+        </member>
+        <member name="M:Nampula.UI.ApplicationWinForm.UserExistOnCache">
+            <summary>
+            Tentativa de validação de usuário usando uma tabela de dados salva com os dados válidos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Nampula.UI.frmSelectCompany.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.frmSelectCompany.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.frmSelectCompany.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.frmServer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.frmServer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.frmServer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Nampula.UI.frmSplash.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Nampula.UI.frmSplash.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Nampula.UI.frmSplash.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

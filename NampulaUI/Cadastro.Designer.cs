@@ -60,7 +60,7 @@
             this.textBoxNomeGato.Name = "textBoxNomeGato";
             this.textBoxNomeGato.Size = new System.Drawing.Size(263, 20);
             this.textBoxNomeGato.TabIndex = 2;
-            this.textBoxNomeGato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aoInserirNomeGato);
+            this.textBoxNomeGato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AoInserirNomeGato);
             // 
             // textBoxIdadeGato
             // 
@@ -68,7 +68,7 @@
             this.textBoxIdadeGato.Name = "textBoxIdadeGato";
             this.textBoxIdadeGato.Size = new System.Drawing.Size(263, 20);
             this.textBoxIdadeGato.TabIndex = 3;
-            this.textBoxIdadeGato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aoInserirIdadeGato);
+            this.textBoxIdadeGato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AoInserirIdadeGato);
             // 
             // botaoSalvar
             // 
@@ -78,7 +78,7 @@
             this.botaoSalvar.TabIndex = 4;
             this.botaoSalvar.Text = "Salvar";
             this.botaoSalvar.UseVisualStyleBackColor = true;
-            this.botaoSalvar.Click += new System.EventHandler(this.aoClicarSalvar);
+            this.botaoSalvar.Click += new System.EventHandler(this.AoClicarSalvar);
             // 
             // botaoCancelar
             // 
@@ -88,7 +88,7 @@
             this.botaoCancelar.TabIndex = 5;
             this.botaoCancelar.Text = "Cancelar";
             this.botaoCancelar.UseVisualStyleBackColor = true;
-            this.botaoCancelar.Click += new System.EventHandler(this.aoClicarCancelar);
+            this.botaoCancelar.Click += new System.EventHandler(this.AoClicarCancelar);
             // 
             // Cadastro
             // 

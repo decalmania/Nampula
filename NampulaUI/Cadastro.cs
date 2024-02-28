@@ -13,24 +13,24 @@ namespace NampulaUI
 
             if (gato != null)
             {
-                preencherCamposComValores(gato);
+                PreencherCamposComValores(gato);
                 novoGato = gato;
             }
         }
 
-        public void preencherCamposComValores(Gatos gato)
+        public void PreencherCamposComValores(Gatos gato)
         {
             textBoxNomeGato.Text = gato.Name;
             textBoxIdadeGato.Text = gato.Idade.ToString();
         }
 
-        public void obterValoresDosCampos()
+        public void ObterValoresDosCampos()
         {
             novoGato.Name = textBoxNomeGato.Text;
             novoGato.Idade = Convert.ToInt32(textBoxIdadeGato.Text);
         }
 
-        public int gerarId()
+        public int GerarId()
         {
             int id = 1;
 
@@ -44,19 +44,17 @@ namespace NampulaUI
             }
         }
 
-        public void verificarSeEditaOuCria(Gatos gato)
+        public void VerificarSeEditaOuCria(Gatos gato)
         {
             try
             {
                 Validacoes.Validar(textBoxNomeGato.Text, textBoxIdadeGato.Text);
 
-                obterValoresDosCampos();
+                ObterValoresDosCampos();
 
                 if (gato.Id == 0)
                 {
-
-                    novoGato.Id = gerarId();
-
+                    novoGato.Id = GerarId();
                 }
 
                 DialogResult = DialogResult.OK;
@@ -67,14 +65,13 @@ namespace NampulaUI
             }
         }
 
-        private void aoClicarSalvar(object sender, EventArgs e)
+        private void AoClicarSalvar(object sender, EventArgs e)
         {
-            verificarSeEditaOuCria(novoGato);
+            VerificarSeEditaOuCria(novoGato);
         }
 
-        public void aoClicarCancelar(object sender, EventArgs e)
+        public void AoClicarCancelar(object sender, EventArgs e)
         {
-
             var confirmarCancelamento = MessageBox(Mensagens.perguntaFecharAba, MessageBoxButtons.YesNo);
 
             if (confirmarCancelamento == DialogResult.Yes)
@@ -83,24 +80,20 @@ namespace NampulaUI
             }
         }
 
-        private void aoInserirNomeGato(object sender, KeyPressEventArgs e)
+        private void AoInserirNomeGato(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-
                 e.Handled = true;
-
             }
         }
 
-        private void aoInserirIdadeGato(object sender, KeyPressEventArgs e)
+        private void AoInserirIdadeGato(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-
                 e.Handled = true;
                 base.OnKeyPress(e);
-
             }
         }
     }

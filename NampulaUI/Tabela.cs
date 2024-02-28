@@ -17,7 +17,6 @@ namespace NampulaUI
 
         public void AtualizarTabela()
         {
-
             try
             {
                 dataGridViewTabela.DataSource = null;
@@ -25,47 +24,29 @@ namespace NampulaUI
             }
             catch (Exception ex)
             {
-                mostrarMensagemExcecao(ex);
+                MostrarMensagemExcecao(ex);
             }
         }
 
-        public bool VerificarSelecaoDeLinhas()
+        public int ObterIdLinhaSelecionada()
         {
-
-            if (dataGridViewTabela.SelectedRows.Count == 1)
-            {
-
-                return true;
-
-            }
-            else
-            {
-
-                return false;
-
-            }
-
-        }
-
-        public int pegarIdObjetoSelecionado()
-        {
+            const int minimoDeLinhasSelecionadas = 1;
+            bool possuiLinhaSelecionada = dataGridViewTabela.SelectedRows.Count == minimoDeLinhasSelecionadas;
             int idSelecionado = 0;
 
-            if (VerificarSelecaoDeLinhas() == true)
+            if (possuiLinhaSelecionada)
             {
-
                 idSelecionado = Convert.ToInt32(dataGridViewTabela.CurrentRow.Cells["Id"].Value);
-
             }
 
             return idSelecionado;
         }
 
-        public Gatos obterObjetoPeloId()
+        public Gatos ObterObjetoPeloId()
         {
             try
             {
-                var id = pegarIdObjetoSelecionado();
+                var id = ObterIdLinhaSelecionada();
                 var objeto = repositorio.ObterPorId(id);
                 return objeto;
             }
@@ -75,7 +56,7 @@ namespace NampulaUI
             }
         }
 
-        private void aoClicarAdicionar(object sender, EventArgs e)
+        private void AoClicarAdicionar(object sender, EventArgs e)
         {
             try
             {
@@ -92,17 +73,16 @@ namespace NampulaUI
             }
             catch (Exception ex)
             {
-                mostrarMensagemExcecao(ex);
+                MostrarMensagemExcecao(ex);
             }
 
         }
 
-        private void aoClicarEditar(object sender, EventArgs e)
+        private void AoClicarEditar(object sender, EventArgs e)
         {
-
             try
             {
-                var gatoEditar = obterObjetoPeloId();
+                var gatoEditar = ObterObjetoPeloId();
                 Cadastro cadastro = new Cadastro(gatoEditar);
                 var resultadoCadastro = cadastro.ShowDialog();
 
@@ -116,12 +96,11 @@ namespace NampulaUI
             }
             catch (Exception ex)
             {
-                mostrarMensagemExcecao(ex);
+                MostrarMensagemExcecao(ex);
             }
-
         }
 
-        private void aoClicarRemover(object sender, EventArgs e)
+        private void AoClicarRemover(object sender, EventArgs e)
         {
             try
             {
@@ -129,8 +108,8 @@ namespace NampulaUI
 
                 if (confirmarCancelamento == DialogResult.Yes)
                 {
-                    var idgatoRemover = pegarIdObjetoSelecionado();
-                    repositorio.Remover(idgatoRemover);
+                    var idGatoRemover = ObterIdLinhaSelecionada();
+                    repositorio.Remover(idGatoRemover);
                     AtualizarTabela();
 
                     MessageBox(Mensagens.confirmacaoGatoRemovido);
@@ -138,15 +117,13 @@ namespace NampulaUI
             }
             catch (Exception ex)
             {
-                mostrarMensagemExcecao(ex);
+                MostrarMensagemExcecao(ex);
             }
         }
 
-        public void mostrarMensagemExcecao(Exception ex)
+        public void MostrarMensagemExcecao(Exception ex)
         {
-
             MessageBox(ex.Message + "\n\n" + ex.InnerException.ToString());
-
         }
     }
 }

@@ -55,7 +55,7 @@
             this.botaoRemover.TabIndex = 13;
             this.botaoRemover.Text = "Remover";
             this.botaoRemover.UseVisualStyleBackColor = true;
-            this.botaoRemover.Click += new System.EventHandler(this.aoClicarRemover);
+            this.botaoRemover.Click += new System.EventHandler(this.AoClicarRemover);
             // 
             // botaoAdicionar
             // 
@@ -65,7 +65,7 @@
             this.botaoAdicionar.TabIndex = 16;
             this.botaoAdicionar.Text = "Adicionar";
             this.botaoAdicionar.UseVisualStyleBackColor = true;
-            this.botaoAdicionar.Click += new System.EventHandler(this.aoClicarAdicionar);
+            this.botaoAdicionar.Click += new System.EventHandler(this.AoClicarAdicionar);
             // 
             // botaoEditar
             // 
@@ -75,7 +75,7 @@
             this.botaoEditar.TabIndex = 17;
             this.botaoEditar.Text = "Editar";
             this.botaoEditar.UseVisualStyleBackColor = true;
-            this.botaoEditar.Click += new System.EventHandler(this.aoClicarEditar);
+            this.botaoEditar.Click += new System.EventHandler(this.AoClicarEditar);
             // 
             // Tabela
             // 
